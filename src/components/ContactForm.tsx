@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { toast } from "sonner";
-
+import emailjs from '@emailjs/browser';
 // Form validation schema
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters" }),
@@ -17,6 +17,8 @@ const formSchema = z.object({
 type FormData = z.infer<typeof formSchema>;
 
 export default function ContactForm() {
+
+  emailjs.init("WBMLnJxjPk86U_ddr"); // Replace with your EmailJS User ID
   const {
     register,
     handleSubmit,
@@ -27,17 +29,29 @@ export default function ContactForm() {
   });
 
   const onSubmit = async (data: FormData) => {
-    console.log(data);
 
     try {
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      // Prepare template parameters
+      const templateParams = {
+        name: data.name,
+        email: data.email,
+        message: data.message,
+      };
 
-      toast.success("Message sent successfully!");
+      // Send email using EmailJS
+      const result = await emailjs.send(
+        'service_ma82ymp',     // Replace with your Service ID
+        'template_nnwrivg',    // Replace with your Template ID
+        templateParams
+      );
+      if (result.status !== 200) {
+        throw new Error('EmailJS service error');
+      } else {
+        toast.success("Message sent successfully!");
+      }
       reset();
     } catch (error) {
-      console.log(error);
-
+      console.error('Failed to send email:', error);
       toast.error("Failed to send message. Please try again.");
     }
   };
