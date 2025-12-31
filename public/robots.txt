@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.afzaalsuleman.click
+
+# Sitemaps
+Sitemap: https://www.afzaalsuleman.click/sitemap.xml
