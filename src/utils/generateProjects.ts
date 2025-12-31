@@ -1,8 +1,7 @@
-// utils/generateProjects.ts
 import { Project } from "../../types";
 
 const projectTitles = [
-  "E-Commerce Platform ",
+  "E-Commerce Platform",
   "Task Management App",
   "Social Media Dashboard",
   "Weather Forecast App",
@@ -20,7 +19,6 @@ const projectTypes = [
   "Full-Stack Project",
   "AI based suggestion system",
   "Open Source Contribution"
-  
 ];
 
 const technologies = [
@@ -41,14 +39,23 @@ const getRandomImage = () => {
   return `https://picsum.photos/${width}/${height}?random=${randomId}`;
 };
 
+// Function to decide project link based on title
+const getProjectLink = (title: string) => {
+  if (title === "E-Commerce Platform") return "https://www.gamerpc.co.uk";
+  return "https://zekovibe.vercel.app/";
+};
+
 export const generateRandomProjects = (count: number): Project[] => {
-  return Array.from({ length: count }, (_, i) => ({
-    title: projectTitles[i % projectTitles.length] || `Project ${i + 1}`,
-    type: projectTypes[Math.floor(Math.random() * projectTypes.length)] || "Web Project",
-    img: getRandomImage(),
-    link: "https://example.com",
-    github: Math.random() > 0.3 ? "https://github.com/Afzaal-Suleman" : undefined,
-    technologies: getRandomItems(technologies, Math.floor(Math.random() * 5) + 2),
-    description: `This project demonstrates my skills in ${getRandomItems(technologies, 2).join(" and ")}. It includes features like user authentication, responsive design, and API integration.`
-  }));
+  return Array.from({ length: count }, (_, i) => {
+    const title = projectTitles[i % projectTitles.length] || `Project ${i + 1}`;
+    return {
+      title,
+      type: projectTypes[Math.floor(Math.random() * projectTypes.length)] || "Web Project",
+      img: getRandomImage(),
+      link: getProjectLink(title),
+      github: Math.random() > 0.3 ? "https://github.com/Afzaal-Suleman" : undefined,
+      technologies: getRandomItems(technologies, Math.floor(Math.random() * 5) + 2),
+      description: `This project demonstrates my skills in ${getRandomItems(technologies, 2).join(" and ")}. It includes features like user authentication, responsive design, and API integration.`
+    };
+  });
 };
