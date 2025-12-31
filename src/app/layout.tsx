@@ -54,6 +54,7 @@ export const metadata: Metadata = {
     "Software Developer Portfolio",
     "Afzaal Web Apps",
     "Afzaal Projects",
+    "unique web applications 4343",
   ],
   authors: [{ name: "Afzaal" }],
   openGraph: {
