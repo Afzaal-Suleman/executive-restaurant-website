@@ -42,6 +42,7 @@ const getRandomImage = () => {
 // Function to decide project link based on title
 const getProjectLink = (title: string) => {
   if (title === "E-Commerce Platform") return "https://www.gamerpc.co.uk";
+  if (title === "Social Media Dashboard") return "https://social-app-u9fj.vercel.app";
   return "https://zekovibe.vercel.app/";
 };
 
