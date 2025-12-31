@@ -80,6 +80,9 @@ export const metadata: Metadata = {
       "Showcasing scalable, responsive web applications using modern technologies like React, Next.js, Node.js, MongoDB, and Tailwind CSS.",
     images: ["/profile.png"],
   },
+  other: {
+    "google-site-verification": "yirGF38dBIH6tS0RopURGFptYHJ-MPtxovirGVQCJZ8",
+  },
 };
 
 
