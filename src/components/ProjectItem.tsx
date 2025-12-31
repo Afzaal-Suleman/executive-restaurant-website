@@ -2,7 +2,6 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Project } from "../../types";
-import SEO from "./SEO";
 interface ProjectProps {
   project?: Project;
   index?: number;
@@ -30,12 +29,7 @@ const ProjectItem = ({ project, index = 0 }: ProjectProps) => {
       viewport={{ once: true, margin: "-60px" }}
       className="relative flex items-center justify-center h-auto w-full  shadow-xl  rounded-xl group hover:bg-gradient-to-r border from-primary to-primaryDark dark:shadow-gray-800 transition-all duration-300 overflow-hidden"
     >
-      <SEO
-        title="Project | Afzaal dev"
-        description="Description of Project  using Next.js and Tailwind CSS."
-        image="/profile.png" // public folder image
-        url="https://www.afzaalsuleman.click/about"
-      />
+      
 
       {/* Project Image with priority for first 3 items */}
       <img
