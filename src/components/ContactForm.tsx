@@ -18,7 +18,7 @@ type FormData = z.infer<typeof formSchema>;
 
 export default function ContactForm() {
 
-  emailjs.init("WBMLnJxjPk86U_ddr"); // Replace with your EmailJS User ID
+  emailjs.init(""); // Replace with your EmailJS User ID
   const {
     register,
     handleSubmit,

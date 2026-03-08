@@ -117,7 +117,7 @@ export default function RootLayout({
             }}
           />
 
-          <div className="mb-20">
+          <div className="">
             <Navbar />
           </div>
           {children}

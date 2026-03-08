@@ -1,32 +1,54 @@
 import HomeCom from "@/components/HomeCom";
 import type { Metadata } from "next";
 
+
 export const metadata: Metadata = {
-  title: "Afzaal dev | Full-Stack Developer Portfolio",
+  metadataBase: new URL("https://executiverestaurant.com"),
+  title: {
+    default: "Executive Restaurant | Fine Dining Experience",
+    template: "%s | Executive Restaurant",
+  },
   description:
-    "I build scalable, responsive full-stack web applications using modern technologies like React, Next.js, Node.js, Express, MongoDB, and Tailwind CSS.",
+    "Executive Restaurant offers a premium fine dining experience with exquisite cuisine, elegant ambiance, and exceptional service. Reserve your table today.",
+
+  keywords: [
+    "Executive Restaurant",
+    "Fine Dining Restaurant",
+    "Luxury Restaurant",
+    "Restaurant Reservations",
+    "Private Dining",
+    "Restaurant Events",
+    "Best Restaurant",
+  ],
+
   openGraph: {
-    title: "Afzaal dev | Full-Stack Developer Portfolio",
+    title: "Executive Restaurant | Fine Dining Experience",
     description:
-      "Showcasing scalable, responsive web applications built with React, Next.js, Node.js, MongoDB, and Tailwind CSS.",
-    url: "https://www.afzaalsuleman.click",
-    siteName: "Afzaal dev",
+      "Discover a premium fine dining experience at Executive Restaurant. Enjoy delicious cuisine, elegant ambiance, and easy table reservations.",
+    url: "https://executiverestaurant.com",
+    siteName: "Executive Restaurant",
     images: [
       {
-        url: "/profile.png",
+        url: "/restaurant-hero.jpg",
         width: 1200,
         height: 630,
-        alt: "Afzaal dev Portfolio",
+        alt: "Executive Restaurant Fine Dining",
       },
     ],
+    locale: "en_US",
     type: "website",
   },
+
   twitter: {
     card: "summary_large_image",
-    title: "Afzaal dev | Full-Stack Developer Portfolio",
+    title: "Executive Restaurant | Fine Dining Experience",
     description:
-      "Showcasing scalable, responsive web applications built with React, Next.js, Node.js, MongoDB, and Tailwind CSS.",
-    images: ["/profile.png"],
+      "Experience luxury dining at Executive Restaurant. Reserve your table and enjoy an unforgettable culinary journey.",
+    images: ["/restaurant-hero.jpg"],
+  },
+
+  icons: {
+    icon: "/favicon.ico",
   },
 };
 export default function Home() {
