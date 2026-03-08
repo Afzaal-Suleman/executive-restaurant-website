@@ -88,7 +88,7 @@ export default function HomeCom() {
   return (
     <div className="bg-white text-gray-900 font-sans">
       {/* Navigation */}
-     
+
 
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center text-white">
@@ -354,7 +354,7 @@ export default function HomeCom() {
                   <Star key={i} size={18} fill="currentColor" />
                 ))}
               </div>
-              <p className="text-gray-700 italic mb-6">"{t.text}"</p>
+              <p className="text-gray-700 italic mb-6">{`"${t.text}"`}</p>
               <p className="font-bold text-gray-900">— {t.name}</p>
             </motion.div>
           ))}

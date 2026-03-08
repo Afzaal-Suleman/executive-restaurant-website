@@ -33,7 +33,7 @@ export default function NotFound() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-6xl md:text-7xl font-serif font-bold text-gray-900 mb-4"
         >
-          Page Under{" "}
+          Page Under
           <span className="text-gold">Construction</span>
         </motion.h1>
 
