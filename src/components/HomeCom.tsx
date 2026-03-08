@@ -1,5 +1,5 @@
 "use client"
-{/* eslint-disable-next-line @next/next/no-img-element */}
+
 import React from "react";
 import { motion } from "framer-motion";
 import {
@@ -114,7 +114,7 @@ export default function HomeCom() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-gold text-black px-10 py-4 text-lg font-semibold flex items-center gap-2 mx-auto hover:bg-amber-500 transition"
+            className="bg-[#D4AF37] text-black px-10 py-4 text-lg font-semibold flex items-center gap-2 mx-auto hover:bg-amber-500 transition"
           >
             Book a Table <ChevronRight size={20} />
           </motion.button>
@@ -174,7 +174,7 @@ export default function HomeCom() {
             Signature <span className="text-gold">Dishes</span>
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            A glimpse of our chef's masterpieces. Each plate tells a story of
+            A glimpse of our chef&apos;s masterpieces. Each plate tells a story of
             flavor and artistry.
           </p>
         </motion.div>
