@@ -44,7 +44,7 @@ export default function NotFound() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto"
         >
-          We're working hard to bring you something extraordinary. 
+          We&aposre working hard to bring you something extraordinary. 
           This page is currently being prepared with the same care and 
           attention to detail you expect from Executive Restaurant.
         </motion.p>
